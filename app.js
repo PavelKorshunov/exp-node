@@ -2,6 +2,7 @@ const express = require('express');
 const handlebars = require('express-handlebars').create({defaultLayout: 'main'});;
 const app = express();
 
+app.disable('x-powered-by');
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
